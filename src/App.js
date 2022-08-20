@@ -3,36 +3,36 @@ import React from "react"
 
 import ListaDeTareas from "./componentes/ListaDeTareas"
 import './App.css';
+import MostrarTareas from "./componentes/MostrarTareas";
 
 
 
 
-function App(props) {  
+function App(props) {
 
 
   return (
     <div className="aplicacion-tareas">
       <div>
 
-           </div>
+      </div>
 
-                <div className="tareas-lista-principal">
-                <h1>Mis Tareas</h1>
-        
-                <ListaDeTareas
-                 />
-      
+      <div className="tareas-lista-principal">
+        <h1>Mis Tareas</h1>
 
-                </div>
-
-            <div>
-            
-        
-
+        <ListaDeTareas
+        />
       </div>
       
+
+      <div>
+
+
+
+      </div>
+
     </div>
-    
+
   );
 }
 

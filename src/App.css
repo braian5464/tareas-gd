@@ -1,4 +1,4 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,18 +6,17 @@
 
 html,
 body {
- color:aliceblue;
- background-color: black;
- font-family: 'Courier New', Courier, monospace;
- margin-top: 40px;
-
+  color: aliceblue;
+  background-color: black;
+  font-family: "Courier New", Courier, monospace;
+  margin-top: 40px;
 }
 h1 {
- color: #1b1b32;
- font-size: 25px;
- font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
- text-align:center;
- margin: 20px 0 ;
+  color: #1b1b32;
+  font-size: 25px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  margin: 20px 0;
 }
 
 .aplicacion-tareas {
@@ -25,16 +24,14 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
 }
 
 .freecodecamp-logo-contenedor {
-width: 100%;
-margin: 20px;
-display: flex;
-align-items: center;
-justify-content: center;
-
+  width: 100%;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .freecodecamp-logo {
@@ -43,12 +40,11 @@ justify-content: center;
 }
 
 .tareas-lista-principal {
-  width: 600px;
+  width: 1000px;
   min-height: 500px;
   background-color: rgb(208, 208, 208);
   padding: 25px;
   margin: 10px;
-  
-  border-radius: 26px;
 
+  border-radius: 26px;
 }

@@ -18,12 +18,27 @@ export default function ListaDeTareas(props) {
       const tareasActualizadas = [tarea, ...tareas];
       setTareas(tareasActualizadas);
     }
+
   }
   const eliminarTarea = id => {
     const tareasActualizadas = tareas.filter(tarea => tarea.id !== id);
     setTareas(tareasActualizadas);
 
   }
+
+  
+
+  const bloquearTarea = id => {
+    const tareasActualizadas = tareas.map(tarea => {
+    if (tarea.id === id) {
+      tarea.bloqueada = !tarea.bloqueada;
+    }
+    return tarea;
+
+  });
+  setTareas(tareasActualizadas);
+  
+}
 
 
 
@@ -58,8 +73,10 @@ export default function ListaDeTareas(props) {
                 texto2={tarea.texto2}
                 texto3={tarea.texto3}
                 completada={tarea.completada}
+                bloqueada={tarea.bloqueada}
                 completarTarea={completarTarea}
                 eliminarTarea={eliminarTarea}
+                bloquearTarea={bloquearTarea}
               />
             )
           }

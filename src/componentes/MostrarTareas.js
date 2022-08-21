@@ -22,12 +22,12 @@ export default function MostrarTareas({ id , editarTarea , idTarea , tareas }) {
         flexDirection: "column",
 
         alignItems: "center",
-        padding: "40px",
-        gap: "5px",
+        padding: "10px",
+        gap: "2px",
       }}>
 
       <AiFillEdit className='tarea-icono'/> 
-      <h2 className='textep0'>Tarea Detalle</h2>
+      <h2 className='texte0'>Tarea Detalle</h2>
       
         
       <p className='textep1'>{textoTarea[0] ? textoTarea[0].texto : ""}</p>

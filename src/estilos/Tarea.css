@@ -60,3 +60,37 @@ margin: 0px;
     cursor: pointer;
 
 }
+
+
+.tareabloqueada{
+
+    width: 30px;
+    min-height: 30px;
+    background-color: #3737c800;
+
+   
+    padding: 8px 15px 8px 20px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.045) ;
+    cursor: pointer;
+
+}
+
+.tareaDesbloqueada{
+
+    width: 40px;
+    min-height: 40px;
+    background-color: #3737c800;
+    color:aliceblue;
+    
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    border: solid #3737c800 ;
+    cursor: pointer;
+
+}

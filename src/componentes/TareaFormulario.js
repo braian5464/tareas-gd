@@ -38,7 +38,7 @@ export default function TareaFormulario(props) {
 
   return (
     <>
-    <div>
+    <div >
     <>
     <form 
     className="tarea-formulario"

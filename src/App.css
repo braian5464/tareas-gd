@@ -20,6 +20,8 @@ h1 {
 }
 
 .aplicacion-tareas {
+  min-width: 110vh;
+  width: 5;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

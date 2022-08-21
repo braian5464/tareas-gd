@@ -16,6 +16,21 @@ outline: none;
 
 }
 
+.tarea-inputDetalle {
+    width: 350px;
+    height: 200px;
+    font-size: 18px;
+    text-align: center;
+    
+    
+    background-color: white ;
+    padding: 14px 32px 14px 16px;
+    border-radius: 4px 0 0 4px;
+    border: 2px solid rgb(16, 55, 16);
+    outline: none;
+   
+    }
+
 .tarea-boton {
  padding: 16px;
  font-size: 18px;

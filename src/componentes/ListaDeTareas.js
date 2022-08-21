@@ -55,6 +55,8 @@ export default function ListaDeTareas(props) {
                 key={tarea.id}
                 id={tarea.id}
                 texto={tarea.texto}
+                texto2={tarea.texto2}
+                texto3={tarea.texto3}
                 completada={tarea.completada}
                 completarTarea={completarTarea}
                 eliminarTarea={eliminarTarea}

@@ -1,0 +1,33 @@
+.textep0 {
+    font-style: oblique;
+    color: black;
+    font-size: 52px;
+    font-family: 'Courier New', Courier, monospace;
+  
+  
+  }
+
+
+.textep1 {
+  color: rgba(232, 232, 236, 0.539);
+  font-size: 52px;
+  font-family: 'Courier New', Courier, monospace;
+
+
+}
+
+.textep2 {
+
+    color: rgba(22, 16, 39, 0.639);
+    width: "400px";
+    min-Height: "500px";
+    text-align: center;
+
+     margin: 20px 0;
+    font-size: 42px;
+    font-family: 'Courier New', Courier, monospace;
+   
+    
+    
+  
+  }

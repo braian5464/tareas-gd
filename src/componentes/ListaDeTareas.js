@@ -8,7 +8,15 @@ import MostrarTareas from './MostrarTareas';
 
 
 
+
+
 export default function ListaDeTareas(props) {
+
+
+  
+
+
+
 
   const [tareas, setTareas] = useState([]);
 
@@ -17,11 +25,23 @@ export default function ListaDeTareas(props) {
       tarea.texto = tarea.texto.trim();
       const tareasActualizadas = [tarea, ...tareas];
       setTareas(tareasActualizadas);
+
+     
     }
 
   }
+
+  
+
   const eliminarTarea = id => {
+
+    
+     
+
     const tareasActualizadas = tareas.filter(tarea => tarea.id !== id);
+
+  
+
     setTareas(tareasActualizadas);
 
   }
@@ -43,6 +63,8 @@ export default function ListaDeTareas(props) {
 
 
 
+
+
   const [idTarea, setIdTarea] = useState()
   const completarTarea = id => {
     const tareasActualizadas = tareas.map(tarea => {
@@ -60,10 +82,17 @@ export default function ListaDeTareas(props) {
 
 
   return (
+
     <div style={{ display: "flex", width: "100%", height: "100%" }}>
+
+         
+
       <div>
+      
         <TareaFormulario onSubmit={agregarTarea} />
+     
         <div className="tareas-lista-contenedor">
+          
           {
             tareas.map((tarea) =>
               <Tarea
@@ -72,11 +101,16 @@ export default function ListaDeTareas(props) {
                 texto={tarea.texto}
                 texto2={tarea.texto2}
                 texto3={tarea.texto3}
+                texto3p={tarea.texto3p}
+
                 completada={tarea.completada}
                 bloqueada={tarea.bloqueada}
                 completarTarea={completarTarea}
                 eliminarTarea={eliminarTarea}
                 bloquearTarea={bloquearTarea}
+                
+                
+
               />
             )
           }

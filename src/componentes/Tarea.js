@@ -6,9 +6,14 @@ import { AiFillBook } from "react-icons/ai";
 import ListaDeTareas from "../componentes/ListaDeTareas"
 
 
-export default function Tarea({id , texto , completada , completarTarea , eliminarTarea ,bloquearTarea , bloqueada  }) {
+export default function Tarea({id , texto , completada , completarTarea , eliminarTarea ,bloquearTarea , bloqueada , restarContador }) {
 
   
+  
+ 
+
+
+
 
   return (
     <div className={completada ? "tarea-contenedor-completada" : "tarea-contenedor" }>
@@ -22,7 +27,7 @@ export default function Tarea({id , texto , completada , completarTarea , elimin
         onClick={() => completarTarea(id)}>
          {texto}
         </div>
-        <div className={bloqueada ? "tareabloqueada" : "tareaDesbloqueada" }
+        <div onSubmit={() =>restarContador (id)} className={bloqueada ? "tareabloqueada" : "tareaDesbloqueada" }
         
         onClick={() => {bloqueada ? completarTarea(id)  : eliminarTarea (id)}}>
         <AiOutlineCloseCircle className="tarea-icono" />

@@ -3,9 +3,15 @@ import { AiFillEdit } from "react-icons/ai";
 import "../estilos/MostrarTarea.css"
 import ReactPlayer from "react-player"
 
+
+
+//<ReactPlayer autoPlay={true} width="500px" height="400px" 
+   //   url={textoTarea[0] ? textoTarea[0].texto3 : ""} />
+
+
 export default function MostrarTareas({ id , editarTarea , idTarea , tareas }) {
 
-  console.log(tareas)
+  
 
   const textoTarea = tareas.filter(tarea => tarea.id === idTarea)
 
@@ -26,14 +32,14 @@ export default function MostrarTareas({ id , editarTarea , idTarea , tareas }) {
         flexDirection: "column",
 
         alignItems: "center",
-        padding: "10px",
-        gap: "2px",
+        padding: "5px",
+        gap: "1px",
       }}>
 
       <AiFillEdit className='tarea-icono'/> 
       <h2 className='texte0'>Tarea Detalle</h2>
       
-      <p className='texteprecio'>${textoTarea[0] ? textoTarea[0].texto3p : ""}</p>
+      <p className='texteprecio'>$ {textoTarea[0] ?  textoTarea[0].texto3p : ""}</p>
 
       <p className='textep1'>{textoTarea[0] ? textoTarea[0].texto : ""}</p>
               
@@ -42,24 +48,23 @@ export default function MostrarTareas({ id , editarTarea , idTarea , tareas }) {
       
       
       <img style={{
-        minwidth: "0px",
-        width: "400px",
-        minHeight: "0px",
-        maxHeight: "400px",
+        minwidth: "300px",
+        width: "420px",
+        minHeight: "300px",
+        maxHeight: "320px",
         backgroundColor: "gray",
         display: "flex",
         flexDirection: "column",
         
         alignItems: "center",
-        padding: "50px",
+        padding: "5px",
         gap: "40px",}}
       src={textoTarea[0] ? textoTarea[0].texto3 : "" }/>
 
       
        <p>{textoTarea[0] ? textoTarea[0].id : ""}</p>
 
-       <ReactPlayer autoplay="true" width="500px" height="400px" 
-      url={textoTarea[0] ? textoTarea[0].texto3 : ""} />
+       
       
       
     </div>

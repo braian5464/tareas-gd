@@ -5,7 +5,7 @@ import {v4 as uuidv4} from "uuid"
 import { evaluate } from "mathjs"
 
 
-export default function TareaFormulario(props) {
+export default function TareaFormulario({agregarTarea}) {
 
   
  
@@ -38,40 +38,57 @@ export default function TareaFormulario(props) {
     const [input, setInput] = useState("");
     const [input2, setInput2] = useState("");
     const [input3, setInput3] = useState("");
-    const [input3p, setInput3p] = useState("");
+    const [input3p, setInput3p] = useState(0);
 
     const manejarCambio = e => {
         setInput2(e.target.value)
+        
     };
 
-    const manejarCambio2 = a => {
-      setInput(a.target.value)
+    const manejarCambio2 = e => {
+      if (input3p === 0 ) {
+        
+
+        setInput3p("")
+      }
+
+      setInput(e.target.value)
     };
 
-    const manejarCambioUrl = c => {
-      setInput3(c.target.value)
+    const manejarCambioUrl = e => {
+      setInput3(e.target.value)
     };
 
-    const manejarCambioPrecio = p => {
-      setInput3p(p.target.value)
+    const manejarCambioPrecio = e => {
+      setInput3p(e.target.value)
       
       
 
     };
 
     const manejarEnvio = e => {
+         
+      
+
         e.preventDefault();
+        
+          
      
           const tareaNueva = {
+          
            id: uuidv4(),
            texto: input,
            texto2: input2,
            texto3: input3,
            texto3p: input3p,
            completada: false
+           
           };
-        props.onSubmit(tareaNueva)  
-        setNumClics3( evaluate (input3p + "+" + guardar ));
+        agregarTarea(tareaNueva)
+        setInput("")  
+        setInput3p("")
+        setInput2("")  
+        setInput3("")
     }
 
   return (
@@ -79,26 +96,25 @@ export default function TareaFormulario(props) {
     <div >
     
 
-    <div className="tarea-inputPrecio" >{guardar}</div>
+   
 
-    <>
+    
     <form 
     className="tarea-formulario"
     onSubmit={manejarEnvio}>
-     <input 
+     <input required
      className="tarea-input"
      type="text"
      placeholder="Escribe una Tarea"
      name="texto"
      onChange={manejarCambio2}
+     value={input}
      />
   
-    </form>
-    </>
     
-    <form 
-    className="tarea-formulario"
-    onSubmit={manejarEnvio}>
+    
+    
+    
      <textarea
      className="tarea-inputDetalle"
      
@@ -106,7 +122,7 @@ export default function TareaFormulario(props) {
      placeholder="Escribe una Nota"
      name="texto"
      onChange={manejarCambio}
-     
+     value={input2}
      />
 
      <input 
@@ -115,6 +131,7 @@ export default function TareaFormulario(props) {
      placeholder="Escribe el url de la img"
      name="texto"
      onChange={manejarCambioUrl}
+     value={input3}
      />
      <input 
      className="tarea-inputPrecio"
@@ -123,17 +140,20 @@ export default function TareaFormulario(props) {
      placeholder="ingrese precio"
      name="texto"
      onChange={manejarCambioPrecio}
+     value={input3p}
      
      />
       
-     <button onClick={props.AgregarTarea} className="tarea-boton">
+      <button  className="tarea-boton">
         Agregar Tarea
      </button>
-     
 
      
     </form>
           
+    
+     
+
     </div>
     </>
   )

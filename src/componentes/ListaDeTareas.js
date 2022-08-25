@@ -14,17 +14,18 @@ export default function ListaDeTareas(props) {
 
 
   
-
-
-
+  const [total,setTotal] = useState(0)
 
   const [tareas, setTareas] = useState([]);
 
   const agregarTarea = tarea => {
+    console.log(tarea)
     if (tarea.texto.trim()) {
       tarea.texto = tarea.texto.trim();
       const tareasActualizadas = [tarea, ...tareas];
+      
       setTareas(tareasActualizadas);
+      setTotal( total +  Number(tarea.texto3p)  )
 
      
     }
@@ -39,11 +40,11 @@ export default function ListaDeTareas(props) {
      
 
     const tareasActualizadas = tareas.filter(tarea => tarea.id !== id);
-
-  
-
+    const numeroResta =  tareas.filter(tarea => tarea.id === id)
+     setTotal(total - numeroResta[0].texto3p)
+    
     setTareas(tareasActualizadas);
-
+    
   }
 
   
@@ -86,10 +87,10 @@ export default function ListaDeTareas(props) {
     <div style={{ display: "flex", width: "100%", height: "100%" }}>
 
          
-
+<div className="tarea-inputPrecio" >{total}</div>
       <div>
       
-        <TareaFormulario onSubmit={agregarTarea} />
+        <TareaFormulario agregarTarea={agregarTarea}  />
      
         <div className="tareas-lista-contenedor">
           

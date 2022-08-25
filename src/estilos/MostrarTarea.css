@@ -1,7 +1,7 @@
 .textep0 {
     font-style: oblique;
     color: black;
-    font-size: 52px;
+    font-size: 48px;
     font-family: 'Courier New', Courier, monospace;
   
   
@@ -9,17 +9,17 @@
 
   .texteprecio {
     color:  rgb(0, 116, 8) ;
-    font-size: 46px;
+    font-size: 42px;
     font-family: 'Courier New', Courier, monospace;
   
   
   }
 
 .textep1 {
-  color: rgba(183, 183, 233, 0.767);
-  font-size: 46px;
+  color: rgba(9, 9, 12, 2.267);
+  font-size: 42px;
   font-family: 'Courier New', Courier, monospace;
-
+  
 
 }
 
@@ -30,7 +30,7 @@
     min-Height: "500px";
     text-align: center;
 
-     margin: 20px 0;
+     margin: 5px 0;
     font-size: 30px;
     font-family: 'Courier New', Courier, monospace;
    

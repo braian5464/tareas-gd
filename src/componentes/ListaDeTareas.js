@@ -64,17 +64,13 @@ export default function ListaDeTareas(props) {
 
 
   const combateTarea = id => {
+
+
     const tareasActualizadas = tareas.map(tarea => {
 
-      if (tarea.textojugador === 1 ) {
-      setatk("0"); 
-      setdf("0"); 
-      }
+      if (tarea.id === id) {
 
-      if (tarea.textojugador === 2 ) {
-        setatkb("0"); 
-        setdfb("0"); 
-      }
+    
 
       if (tarea.textojugador === 1 ) {
 
@@ -91,10 +87,13 @@ export default function ListaDeTareas(props) {
   
       }
 
+    }
+
       console.log(tarea)
 
      if (tarea.id === id) {
       if (tarea.completada  === true ) {
+        if (tarea.completada  === true) {
 
       setatk( Number(tarea.textoatc)); 
        setdf( Number(tarea.textodf)); 
@@ -106,6 +105,7 @@ export default function ListaDeTareas(props) {
         console.log(atk2)
      setatk( evaluate ( Number(tarea.textoatc) ));
       setatk2( evaluate ( atk + "-" + dfb ));
+     }
 
   if (atk2 === 0 ) {
     console.log(atk2)
@@ -133,12 +133,7 @@ export default function ListaDeTareas(props) {
   }
   
   
-  if (atk2 === 0 ) {
-    console.log(atk2)
   
-    setatk2( evaluate ( atk + "-" + dfb ));
-  
-  }
   if (atk2 > 0 ) {
     console.log(atk2)
   
@@ -178,6 +173,7 @@ export default function ListaDeTareas(props) {
       
           };
 
+
            }
         }
     }
@@ -194,30 +190,13 @@ export default function ListaDeTareas(props) {
 
 const combateTarea2 = id => {
 
-  
-  
 
-  
   const tareasActualizadas = tareas.map(tarea => {
 
     console.log(tarea.textojugador)
 
-    if (tarea.textojugador === 1 ) {
-      setatk("0"); 
-      setdf("0"); 
-      }
+    if (tarea.id === id) { 
 
-    if (tarea.textojugador === 2 ) {
-      setatkb("0"); 
-      setdfb("0"); 
-    }
-
-    if (tarea.textojugador === 2 ) {
-
-      setatkb( Number(tarea.textoatc)); 
-      setdfb( Number(tarea.textodf)); 
-
-    }
 
 
       if (tarea.textojugador === 1 ) {
@@ -227,8 +206,17 @@ const combateTarea2 = id => {
 
       }
 
+      if (tarea.textojugador === 2 ) {
+
+        setatkb( Number(tarea.textoatc)); 
+        setdfb( Number(tarea.textodf)); 
+  
+      }
+    
 
       console.log(tarea.textojugador)
+
+    }
 
     if (atk2b < 0 ) {
       console.log(atk2b)
@@ -238,8 +226,9 @@ const combateTarea2 = id => {
 
     if (tarea.id === id) { 
       if (tarea.completada  === true ) {
+        if (tarea.completada  === true ) {
 
-         setatkb( Number(tarea.textoatc)); 
+        setatkb( Number(tarea.textoatc)); 
        setdfb( Number(tarea.textodf)); 
     
       
@@ -275,15 +264,19 @@ const combateTarea2 = id => {
     setatk2b( evaluate ( "0" ));
     
     }
+   }
+
         }
       }
     }
 
-
     if (atk2b === 0 ) {
       console.log(atk2b)
+    
       setatk2b( evaluate ( atkb + "-" + df ));
+    
     }
+    
     if (atk2b > 0 ) {
       console.log(atk2b)
     setatk2b( evaluate ( atkb + "-" + df));
@@ -292,6 +285,8 @@ const combateTarea2 = id => {
       console.log(atk2b)
     setatk2b( evaluate ( "0" ));
     }
+
+   
     
   console.log("ob")
   console.log(atk2)
@@ -303,6 +298,7 @@ const combateTarea2 = id => {
   if (tarea.id === id) {
     if (tarea.completada === true) {
       if (tarea.id === id ) {
+
       
 
     (tarea.textohp) =  ( evaluate ( Number(tarea.textohp) + "-" + ( atk2 + "+" + ( atk2 + "*" + ( Number(tarea.textord)  + "/" + "100" ) )  ))  );

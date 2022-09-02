@@ -41,12 +41,64 @@ h1 {
   height: 50px;
 }
 
+
+
+.Carta {
+  width: 400px;
+  min-height: 400px;
+  background-color: rgb(208, 208, 208);
+  padding: 5px;
+  margin: 1px;
+
+  border-radius: 26px;
+  
+
+}
+
 .tareas-lista-principal {
-  width: 1000px;
-  min-height: 500px;
+  width: 2000px;
+  min-height: 1000px;
   background-color: rgb(208, 208, 208);
   padding: 25px;
   margin: 10px;
 
   border-radius: 26px;
+
+ 
+  
 }
+
+
+
+
+
+
+
+.tareas-lista-principal3:hover{
+    
+  animation-name: infinite;
+  animation-duration: 8s;
+  animation-fill-mode:forwards;
+  
+  
+}
+
+
+@keyframes infinite  {
+
+0%{
+    background-color: rgba(208, 208, 208, 0.426);
+    margin: 10px;
+}
+50%{
+    background-color: rgba(208, 208, 208, 0.893) ;
+    margin: 70px;
+    
+}
+100%{
+    background-color: rgb(208, 208, 208);
+    margin: 10px;
+}
+
+
+}  

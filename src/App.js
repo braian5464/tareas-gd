@@ -4,7 +4,7 @@ import React from "react"
 import ListaDeTareas from "./componentes/ListaDeTareas"
 import './App.css';
 import MostrarTareas from "./componentes/MostrarTareas";
-
+import Puente from "./componentes/Puente";
 
 
 
@@ -13,14 +13,14 @@ function App(props) {
 
   return (
     <div className="aplicacion-tareas">
-      <div>
+      
 
-      </div>
+      
 
       <div className="tareas-lista-principal">
-        <h1>Mis Tareas</h1>
+        <h1>Menu Tareas</h1>
 
-        <ListaDeTareas
+        <Puente
         />
         
       </div>
@@ -28,11 +28,11 @@ function App(props) {
       
       
 
-      <div>
+      
 
 
 
-      </div>
+      
 
     </div>
 

@@ -2,13 +2,22 @@ import React from 'react';
 import "../estilos/Tarea.css";
 import { AiOutlineCloseCircle } from "react-icons/ai";
 import { AiFillBook } from "react-icons/ai";
+import { AiFillCalculator } from "react-icons/ai";
 
-import ListaDeTareas from "../componentes/ListaDeTareas"
+import ListaDeTareas from "../componentes/ListaDeTareas";
 
 
-export default function Tarea({id , texto , completada , completarTarea , eliminarTarea ,bloquearTarea , bloqueada , restarContador }) {
+
+
+export default function Tarea({id , texto , completada , completarTarea , completarTarea2 , eliminarTarea ,bloquearTarea , bloqueada , bloqueada2 , restarContador, combateTarea , combateTarea2 }) {
 
   
+  
+    
+
+
+
+   
   
  
 
@@ -24,13 +33,20 @@ export default function Tarea({id , texto , completada , completarTarea , elimin
         <AiFillBook className='tarea-icono'/>
         </div>
         <div className="tarea-texto"
-        onClick={() => completarTarea(id)}>
+        onClick={() => {bloqueada ? completarTarea(id)  : completarTarea2(id)}}>
          {texto}
         </div>
         <div onSubmit={() =>restarContador (id)} className={bloqueada ? "tareabloqueada" : "tareaDesbloqueada" }
         
         onClick={() => {bloqueada ? completarTarea(id)  : eliminarTarea (id)}}>
         <AiOutlineCloseCircle className="tarea-icono" />
+        </div>
+
+        
+        <div
+        className="tarea-icono" 
+        onClick={() => { bloqueada2 ? eliminarTarea (id) : (bloqueada ? combateTarea2(id)  : combateTarea(id)) } }>
+        <AiFillCalculator className='tarea-icono'/>
         </div>
               
     </div>

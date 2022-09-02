@@ -29,6 +29,20 @@ outline: none;
     
     }
 
+    .tarea-inputPreciohp {
+
+        width: 175px;
+        font-size: 28px;
+        color: rgb(0, 116, 8) ;
+        background-color: white ;
+        padding: 14px 32px 14px 16px;
+        border-radius: 4px 0 0 4px;
+        border: 2px solid rgb(10, 37, 10);
+        outline: none;
+        
+        }
+
+
 .tarea-inputDetalle {
     min-width: 350px;
     min-height: 200px;
@@ -56,4 +70,5 @@ outline: none;
  background-color: rgb(20, 66, 20);
  color: #fff;
  text-transform: capitalize;
+ 
 }

@@ -15,6 +15,14 @@
   
   }
 
+  .texteprecioHP {
+    color:  rgb(163, 5, 5) ;
+    font-size: 42px;
+    font-family: 'Courier New', Courier, monospace;
+  
+  
+  }
+
 .textep1 {
   color: rgba(9, 9, 12, 2.267);
   font-size: 42px;

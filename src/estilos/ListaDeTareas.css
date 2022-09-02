@@ -4,3 +4,17 @@ flex-wrap: wrap;
 justify-content: center;
 margin-top: 15px;
 }
+
+
+
+
+
+.almacen-carta {
+    width: 500px;
+    min-height: 500px;
+    background-color: rgb(122, 106, 187);
+    padding: 0px;
+    margin: 0x;
+  
+    border-radius: 26px;
+  }

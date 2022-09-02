@@ -1,0 +1,46 @@
+.tareas-lista-principal2 {
+ 
+    width: 900px;
+    height: 500px;
+
+    background-color: rgb(208, 208, 208);
+    padding: 0px;
+    margin: 0px;
+  
+    border-radius: 26px;
+    
+    display: flex ;
+    flex-direction: row ;
+    justify-content: start;
+    align-items: center;
+    
+    
+  
+  }
+  .tareas-lista-principal2a {
+ 
+    width: 400px;
+    height: 500px;
+
+    background-color: rgb(208, 208, 208);
+    padding: 0px;
+    margin: 0px;
+  
+    border-radius: 26px;
+    
+  
+  }
+
+  .tareas-lista-principal2b {
+ 
+    width: 900px;
+    height: 500px;
+
+    background-color: rgb(208, 208, 208);
+    padding: 0px;
+    margin: 0px;
+  
+    border-radius: 26px;
+    
+  
+  }

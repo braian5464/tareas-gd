@@ -70,9 +70,7 @@ export default function ListaDeTareas(props) {
 
       if (tarea.id === id) {
 
-
-
-        if (tarea.bloqueada === true) {
+    
 
       if (tarea.textojugador === 1 ) {
 
@@ -80,19 +78,7 @@ export default function ListaDeTareas(props) {
         setdf( Number(tarea.textodf)); 
 
       }
-      }
 
-      if (tarea.bloqueada === false) {
-
-        if (tarea.textojugador === 2 ) {
-  
-          setatk( Number(tarea.textoatc)); 
-          setdf( Number(tarea.textodf)); 
-  
-        }
-        }
-
-        if (tarea.bloqueada === true) {
   
       if (tarea.textojugador === 2 ) {
   
@@ -100,20 +86,8 @@ export default function ListaDeTareas(props) {
         setdfb( Number(tarea.textodf)); 
   
       }
-    }
-
-    if (tarea.bloqueada === false) {
-  
-      if (tarea.textojugador === 1 ) {
-  
-        setatkb( Number(tarea.textoatc)); 
-        setdfb( Number(tarea.textodf)); 
-  
-      }
-    }
 
     }
-
 
       console.log(tarea)
 
@@ -244,31 +218,6 @@ const combateTarea2 = id => {
 
     }
 
-    if (tarea.id === id) {
-
-      if (tarea.bloqueada === true) {
-      if (tarea.textojugador === 1 ) {
-      setatk( Number(tarea.textoatc)); 
-      setdf( Number(tarea.textodf)); 
-      }}
-      if (tarea.bloqueada === false) {
-      if (tarea.textojugador === 2 ) {
-        setatk( Number(tarea.textoatc)); 
-        setdf( Number(tarea.textodf)); 
-      }}
-      if (tarea.bloqueada === true) {
-      if (tarea.textojugador === 2 ) {
-      setatkb( Number(tarea.textoatc)); 
-      setdfb( Number(tarea.textodf)); 
-      }}
-      if (tarea.bloqueada === false) {
-      if (tarea.textojugador === 1 ) {
-      setatkb( Number(tarea.textoatc)); 
-      setdfb( Number(tarea.textodf)); 
-      }}
-
-  }
-
     if (atk2b < 0 ) {
       console.log(atk2b)
     setatk2b( evaluate ( "0" ));
@@ -279,7 +228,7 @@ const combateTarea2 = id => {
       if (tarea.completada  === true ) {
         if (tarea.completada  === true ) {
 
-        setatkb( Number(tarea.textoatc)); 
+        //setatkb( Number(tarea.textoatc)); 
        setdfb( Number(tarea.textodf)); 
     
       
@@ -294,16 +243,9 @@ const combateTarea2 = id => {
       console.log(atkb)
 
     setatkb( evaluate ( Number(tarea.textoatc) ));
-    setatk( evaluate ( atkb + "-" + df ));
+    setatk2b( evaluate ( atkb + "-" + df ));
 
     if (atk2b === 0 ) {
-      console.log(atk2b)
-    
-      setatk2b( evaluate ( atkb + "-" + df ));
-    
-    }
-
-    if (atk2b ===! 0 ) {
       console.log(atk2b)
     
       setatk2b( evaluate ( atkb + "-" + df ));
